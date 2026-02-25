@@ -2,6 +2,7 @@
 # define CUB3D_H
 
 # include "mlx.h"
+# include "libft.h"
 # include <math.h>
 # include <stdlib.h>
 
@@ -18,7 +19,7 @@ typedef struct s_game
 	double	plane_x;
 	double	plane_y;
 	int		world_map[24][24];
-}t_game;
+}	t_game;
 
 void	init_game(t_game *game);
 void	init_world_map(t_game *game);
