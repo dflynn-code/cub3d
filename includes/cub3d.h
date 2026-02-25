@@ -2,6 +2,7 @@
 # define CUB3D_H
 
 # include "mlx.h"
+/* Use includes/libft.h as the sole libft entrypoint for project files. */
 # include "libft.h"
 # include <math.h>
 # include <stdlib.h>
