@@ -10,7 +10,7 @@ SRC = src/main.c src/raycasting.c
 OBJ = $(SRC:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes -I$(LIBFT_DIR) -I$(MLX_DIR)
+CFLAGS = -Wall -Wextra -Werror -Iincludes -Ilibft -I$(MLX_DIR)
 LDFLAGS = -L$(LIBFT_DIR) -L$(MLX_DIR)
 LDLIBS = -lft -lmlx -lm -lXext -lX11 -lpthread -lrt -ldl
 
