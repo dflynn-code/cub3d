@@ -1,10 +1,8 @@
 # cub3d
 
-A minimal `cub3d` repository with project sources, headers, and a vendored `libft`.
+This repository contains a minimal `cub3d` layout with source files, project headers, and a vendored `libft`.
 
----
-
-## 📁 Project layout
+## Project layout
 
 ```text
 .
@@ -18,32 +16,22 @@ A minimal `cub3d` repository with project sources, headers, and a vendored `libf
     └── raycasting.c
 ```
 
-| Path | Purpose |
-|---|---|
-| `src/` | Main game source files. |
-| `includes/` | Project headers. |
-| `includes/libft/` | Vendored `libft` sources + its Makefile. |
-| `Makefile` | Orchestrates libft, MiniLibX, and final `cub3d` build. |
+- `src/` contains the current game source files.
+- `includes/` contains project headers.
+- `includes/libft/` contains the vendored `libft` sources and its Makefile.
+- `Makefile` builds `libft`, clones/builds MiniLibX when needed, and links the final `cub3d` binary.
 
----
-
-## 🛠️ Build flow
-
-The root `Makefile` performs these steps:
+## Build flow
 
 1. Build `libft` from `includes/libft`.
-2. Clone `minilibx` if missing.
+2. Clone `minilibx` if the folder is missing.
 3. Build MiniLibX.
 4. Compile and link `cub3d`.
-
-Typical command:
 
 ```bash
 make
 ```
 
----
+## Notes
 
-## ⚠️ Environment note
-
-In restricted environments, `make` may fail while cloning MiniLibX if GitHub access is blocked.
+In restricted environments, `make` may fail while cloning MiniLibX if network access to GitHub is blocked.
