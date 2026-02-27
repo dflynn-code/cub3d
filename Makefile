@@ -1,6 +1,6 @@
 NAME = cub3d
 
-LIBFT_DIR = libft
+LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 MLX_DIR = minilibx
