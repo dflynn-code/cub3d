@@ -1,56 +1,52 @@
-# cub3d
+*This project has been created as part of the 42 curriculum by [your_login].*
 
-> A compact **cub3d** setup with core sources, project headers, and a vendored `libft`.
+## Description
+cub3D is a raycasting-based 3D engine written in C, inspired by Wolfenstein 3D and developed as part of the 42 curriculum. It renders a first-person maze view using the DDA (Digital Differential Analyzer) algorithm and MiniLibX.
 
----
+## Instructions
+### Dependencies
+- MiniLibX
+- libft
+- X11 development libraries
 
-## ✨ At a glance
-
-- Language: **C**
-- Build system: **Makefile**
-- Local library: **`includes/libft/`**
-- Graphics dependency: **MiniLibX** (`minilibx/`)
-
----
-
-## 📁 Project layout
-
-```text
-.
-├── Makefile
-├── includes/
-│   ├── cub3d.h
-│   ├── libft.h
-│   └── libft/
-└── src/
-    ├── main.c
-    └── raycasting.c
-```
-
-| Path | Purpose |
-|---|---|
-| `src/` | Main game source files (`main.c`, `raycasting.c`). |
-| `includes/` | Project headers. |
-| `includes/libft/` | Vendored `libft` source + its Makefile. |
-| `Makefile` | Builds `libft`, prepares MiniLibX, then links `cub3d`. |
-
----
-
-## 🛠️ Build
-
+### Compilation
 ```bash
 make
 ```
 
-Build flow:
+### Execution
+```bash
+./cub3D maps/map.cub
+```
 
-1. Build `libft` from `includes/libft`.
-2. Clone `minilibx` if it does not exist.
-3. Build MiniLibX.
-4. Compile and link the final `cub3d` binary.
+### Makefile rules
+- `all`: Build the mandatory project
+- `clean`: Remove object files
+- `fclean`: Remove object files and executable(s)
+- `re`: Rebuild from scratch (`fclean` + `all`)
+- `bonus`: Build bonus features
 
----
+## Controls
+- `W`, `A`, `S`, `D`: Move
+- `Left Arrow` / `Right Arrow`: Rotate camera
+- `ESC`: Quit
+- Window `X` button: Quit
 
-## ⚠️ Environment note
+## Map format
+The `.cub` file contains:
+- Texture paths: `NO`, `SO`, `EA`, `WE`
+- Floor and ceiling colors: `F` and `C` in RGB format
+- A map grid using valid characters: `0`, `1`, `N`, `S`, `E`, `W`
 
-In restricted environments, `make` may fail while cloning MiniLibX if GitHub access is blocked.
+The map definition must be the last section of the file and must be fully enclosed by walls.
+
+## Resources
+- Lode Vandevenne's Raycasting Tutorial: https://lodev.org/cgtutor/raycasting.html
+- Original Wolfenstein 3D (id Software): https://en.wikipedia.org/wiki/Wolfenstein_3D
+
+### AI usage in this project
+AI assistance was used to:
+- Scaffold the parser architecture
+- Debug compiler and linker issues
+- Implement the image buffer rendering pipeline
+- Write the memory cleanup logic
