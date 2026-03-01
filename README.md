@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by [your_login].*
+*This project has been created as part of the 42 curriculum by akjoerse, daflynn.*
 
 ## Description
 cub3D is a raycasting-based 3D engine written in C, inspired by Wolfenstein 3D and developed as part of the 42 curriculum. It renders a first-person maze view using the DDA (Digital Differential Analyzer) algorithm and MiniLibX.
@@ -45,8 +45,13 @@ The map definition must be the last section of the file and must be fully enclos
 - Original Wolfenstein 3D (id Software): https://en.wikipedia.org/wiki/Wolfenstein_3D
 
 ### AI usage in this project
-AI assistance was used to:
-- Scaffold the parser architecture
-- Debug compiler and linker issues
-- Implement the image buffer rendering pipeline
-- Write the memory cleanup logic
+This project was developed with extensive and deliberate use of multiple AI tools across every phase, used as an accelerated learning and development pipeline under significant time pressure.
+Tools used: ChatGPT, Claude (Anthropic), GitHub Copilot/Codex, Deepseek, and Gemini.
+
+ChatGPT — initial DDA implementation, basic MLX window with ceiling/floor/wall rendering
+Claude — progress documentation, architectural review, parser design, image buffer pipeline, valgrind analysis, re-prompting Codex when it made poor structural decisions
+Codex — primary coding interface when live testing was unavailable, norm compliance passes after each feature milestone, folder restructuring
+Deepseek — wall rendering phase and texture loading concepts
+Gemini — texture loading ideas; also integrated into a custom n8n webhook pipeline reading GitHub commits and generating Socratic teaching prompts fed into Google Sheets to help both partners track and understand the evolving codebase
+
+What was done manually: architectural direction between AI iterations, final norm error fixes in vim, integration of versions across machines, and judgment calls about which AI output to accept or re-prompt.
