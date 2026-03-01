@@ -1,12 +1,7 @@
 NAME = cub3d
 
-<<<<<<< HEAD
-LIBFT_DIR = libft
-LIBFT     = $(LIBFT_DIR)/libft.a
-=======
 LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
->>>>>>> 550d5f60007a8949cee11e61a67c713c4c998634
 
 MLX_DIR = minilibx
 MLX_LIB = $(MLX_DIR)/libmlx.a
